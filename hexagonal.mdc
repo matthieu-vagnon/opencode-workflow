@@ -1,6 +1,5 @@
 ---
-description: Appliquer pour les projets Next.js et React.js
-alwaysApply: false
+alwaysApply: true
 ---
 
 # Cursor Instructions
