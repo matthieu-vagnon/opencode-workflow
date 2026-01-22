@@ -1,9 +1,9 @@
-# Master Rules
+# Règles Maîtresses
 
-The following rules have priority over ALL other rules:
+Les règles suivantes ont priorité sur TOUTES les autres règles :
 
-- ALWAYS write TSDoc comments FOR AND ONLY FOR **exported** functions, **exported** classes, and **exported** types/interfaces;
-- NEVER write any other comments/logs UNLESS explicitly requested;
-- ALWAYS respond in French;
-- Treat `context7:*` MCP as the authoritative source of documentation for any dependency;
-- Treat `exa:*` MCP as an extra source of information when `context7:*` does not reach your needs.
+- TOUJOURS écrire des commentaires TSDoc UNIQUEMENT pour les fonctions, classes et types/interfaces **exportés** ;
+- JAMAIS d'autres commentaires/logs SAUF si explicitement demandé ;
+- TOUJOURS répondre en français ;
+- Utiliser `context7:*` MCP comme source de documentation autoritaire pour toute dépendance ;
+- Utiliser `exa:*` MCP comme source complémentaire quand `context7:*` ne suffit pas.
