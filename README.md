@@ -1,6 +1,6 @@
 <div align="center">
   <img src="./readme-illustration.png" />
-</div>
+</div><br />
 
 - [Claude Code Workflow](#claude-code-workflow)
   - [Features](#features)
