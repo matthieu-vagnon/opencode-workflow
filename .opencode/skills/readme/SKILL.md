@@ -1,6 +1,6 @@
 ---
 name: readme
-description: Generates or updates the project README.md by analyzing the structure and configuration files.
+description: Generates or updates all the README.md present in the project by analyzing the structure and configuration files.
 ---
 
 # README Generator Skill

@@ -1,11 +1,11 @@
 ---
-name: scalpel
-description: Context-first implementation strategy that treats provided files as immutable foundation when the keyword "scalpel" is used with one or more files added as context.
+name: implement-within
+description: Active when the prompt starts with "implement within" and one or more files are provided. The described feature is then implemented within the given context.
 ---
 
 # Context-First Strategy
 
-When files are provided as context with the keyword "scalpel", treat them as the authoritative foundation: existing types, classes, interfaces, and structures must be reused as-is.
+Treat provided files as the authoritative foundation: existing types, classes, interfaces, and structures must be reused as-is.
 
 ## Workflow
 
