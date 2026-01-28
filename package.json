@@ -1,0 +1,11 @@
+{
+  "name": "opencode-workflow",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "bootstrap": "node bootstrap.mjs"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.11.0"
+  }
+}
