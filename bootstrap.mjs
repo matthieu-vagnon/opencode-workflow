@@ -142,6 +142,9 @@ async function main() {
     path.join(targetPath, "opencode.json"),
   );
 
+  // Update .gitignore
+  updateGitignore(targetPath);
+
   s.stop("Setup complete");
 
   const mode = useSymlinks ? "linked" : "copied";
@@ -152,6 +155,7 @@ async function main() {
       `Agents:        ${stats.agents} ${mode}`,
       `AGENTS.md:     ${mode}`,
       `opencode.json: copied`,
+      `.gitignore:    updated`,
     ].join("\n"),
     "Summary",
   );
@@ -198,6 +202,39 @@ function copyPath(source, target) {
   } else {
     fs.copyFileSync(source, target);
   }
+}
+
+const GITIGNORE_SECTION_HEADER = "# OpenCode Configuration";
+const GITIGNORE_ENTRIES = [".opencode", "AGENTS.md", "opencode.json"];
+
+/**
+ * Updates or creates the .gitignore file in the target directory
+ * to include OpenCode configuration entries.
+ */
+function updateGitignore(targetPath) {
+  const gitignorePath = path.join(targetPath, ".gitignore");
+  let content = "";
+
+  if (fs.existsSync(gitignorePath)) {
+    content = fs.readFileSync(gitignorePath, "utf-8");
+
+    // Check if section already exists
+    if (content.includes(GITIGNORE_SECTION_HEADER)) {
+      return; // Already configured
+    }
+
+    // Ensure content ends with newline before adding section
+    if (content.length > 0 && !content.endsWith("\n")) {
+      content += "\n";
+    }
+    content += "\n";
+  }
+
+  // Add OpenCode section
+  content += GITIGNORE_SECTION_HEADER + "\n";
+  content += GITIGNORE_ENTRIES.join("\n") + "\n";
+
+  fs.writeFileSync(gitignorePath, content);
 }
 
 main().catch(console.error);
