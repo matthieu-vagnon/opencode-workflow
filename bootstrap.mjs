@@ -13,6 +13,8 @@ const TECHNOLOGIES = [
 ];
 
 const GENERIC_RULES = ["project-stack"];
+const GENERIC_SKILLS = ["readme-writing", "implement-within"];
+const GENERIC_AGENTS = [];
 
 async function main() {
   const targetArg = process.argv[2];
@@ -105,7 +107,10 @@ async function main() {
   if (fs.existsSync(skillsDir)) {
     for (const dir of fs.readdirSync(skillsDir)) {
       const skillPath = path.join(skillsDir, dir);
-      if (fs.statSync(skillPath).isDirectory()) {
+      if (
+        fs.statSync(skillPath).isDirectory() &&
+        shouldInclude(dir, selectedTechs, GENERIC_SKILLS)
+      ) {
         linkOrCopy(
           skillPath,
           path.join(targetPath, ".opencode", "skills", dir),
@@ -120,7 +125,10 @@ async function main() {
   if (fs.existsSync(agentsDir)) {
     for (const dir of fs.readdirSync(agentsDir)) {
       const agentPath = path.join(agentsDir, dir);
-      if (fs.statSync(agentPath).isDirectory()) {
+      if (
+        fs.statSync(agentPath).isDirectory() &&
+        shouldInclude(dir, selectedTechs, GENERIC_AGENTS)
+      ) {
         linkOrCopy(
           agentPath,
           path.join(targetPath, ".opencode", "agents", dir),
@@ -170,10 +178,14 @@ function resolvePath(inputPath) {
   return path.resolve(inputPath);
 }
 
+function shouldInclude(name, selectedTechs, genericList) {
+  if (genericList.includes(name)) return true;
+  return selectedTechs.some((tech) => name.startsWith(`${tech}-`));
+}
+
 function shouldIncludeRule(filename, selectedTechs) {
   const name = filename.replace(".md", "");
-  if (GENERIC_RULES.includes(name)) return true;
-  return selectedTechs.some((tech) => name.startsWith(`${tech}-`));
+  return shouldInclude(name, selectedTechs, GENERIC_RULES);
 }
 
 function isGeneric(filename) {

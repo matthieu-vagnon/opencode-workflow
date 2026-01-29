@@ -1,3 +1,8 @@
+---
+name: ts-test-writing
+description: Implement tests in TypeScript.
+---
+
 # Testing Guidelines
 
 ## Principles

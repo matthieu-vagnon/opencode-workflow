@@ -1,4 +1,4 @@
-# React Component Patterns
+# React Conventions
 
 ## Core Rules
 
@@ -45,12 +45,12 @@ For related components that share implicit state:
 
 ## Performance (measure before optimizing)
 
-| Tool          | When                                                     |
-| ------------- | -------------------------------------------------------- |
-| `React.memo`  | Component re-renders often with same props               |
-| `useMemo`     | Expensive calculation in render                          |
-| `useCallback` | Stable reference for callbacks passed as props           |
-| `React.lazy`  | Code splitting by route/feature                          |
+| Tool          | When                                           |
+| ------------- | ---------------------------------------------- |
+| `React.memo`  | Component re-renders often with same props     |
+| `useMemo`     | Expensive calculation in render                |
+| `useCallback` | Stable reference for callbacks passed as props |
+| `React.lazy`  | Code splitting by route/feature                |
 
 ## Hooks
 

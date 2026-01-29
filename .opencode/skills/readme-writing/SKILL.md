@@ -1,5 +1,5 @@
 ---
-name: readme
+name: readme-writing
 description: Generates or updates all the README.md present in the project by analyzing the structure and configuration files.
 ---
 
