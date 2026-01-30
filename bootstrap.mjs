@@ -12,7 +12,7 @@ const TECHNOLOGIES = [
   { value: "ts", label: "TypeScript", hint: "Conventions, testing" },
 ];
 
-const GENERIC_RULES = ["project-stack"];
+const GENERIC_RULES = [];
 const GENERIC_SKILLS = ["readme-writing", "implement-within"];
 const GENERIC_AGENTS = [];
 

@@ -2,10 +2,12 @@
 
 ## Core Rules
 
-- Functional components only
-- Destructure props in the signature
-- One file = one exported component (+ private helpers if needed)
-- Recommended max size: ~150 lines
+- List of dependencies in `./package.json`;
+- You can suggest changes but not without asking first;
+- Functional components only;
+- Destructure props in the signature;
+- One file = one exported component (+ private helpers if needed);
+- Recommended max size for components: ~150 lines.
 
 ## Patterns
 

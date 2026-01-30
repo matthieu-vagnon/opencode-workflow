@@ -18,7 +18,6 @@ Configuration and conventions to optimize OpenCode usage on TypeScript/React pro
 ```
 .opencode/
 ├── rules/
-│   ├── project-stack.md               # Supported tech stack
 │   ├── ts-conventions.md              # TypeScript conventions
 │   ├── react-conventions.md           # React component patterns
 │   └── react-hexagonal-architecture.md # Hexagonal architecture
@@ -100,11 +99,11 @@ Done
 
 ### Rule Filtering
 
-| Selection  | Rules Included                                |
-| ---------- | --------------------------------------------- |
-| React      | `react-*.md` + `project-stack.md`             |
-| TypeScript | `ts-*.md` + `project-stack.md`                |
-| Both       | `react-*.md` + `ts-*.md` + `project-stack.md` |
+| Selection  | Rules Included           |
+| ---------- | ------------------------ |
+| React      | `react-*.md`             |
+| TypeScript | `ts-*.md`                |
+| Both       | `react-*.md` + `ts-*.md` |
 
 ### Symlinks vs Copy
 
@@ -125,7 +124,6 @@ If you prefer not to use symlinks:
 1. Copy the `.opencode/` folder to the root of your project
 2. Copy `AGENTS.md` to your project root
 3. Copy `opencode.json` to your project root
-4. Adapt `rules/project-stack.md` according to your stack
 
 ## Available Skills
 
