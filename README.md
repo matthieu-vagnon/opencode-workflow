@@ -6,14 +6,6 @@ Configuration and conventions to optimize AI coding assistants on TypeScript/Rea
 
 ![Features Illustration](./.github/assets/readme-illustration.png)
 
-- Multi-tool support: Claude Code and OpenCode
-- Ready-to-use configuration rules
-- Strict TypeScript conventions with recommended patterns
-- Hexagonal architecture for React applications
-- Testing guidelines with Testing Library
-- Custom skills (readme-writing, implement-within, ts-test-writing)
-- Bootstrap script for easy setup (symlinks or copy)
-
 ## Tech Stack Coverage
 
 | Category | Technologies                                              |
@@ -102,10 +94,10 @@ bootstrap.mjs               # Node.js setup script
 
 ## Supported Tools
 
-| Tool       | Config File   | Root File  | Directory  |
-| ---------- | ------------- | ---------- | ---------- |
-| Claude Code | `.mcp.json`  | `CLAUDE.md` | `.claude/` |
-| OpenCode   | `opencode.json` | `AGENTS.md` | `.opencode/` |
+| Tool        | Config File     | Root File   | Directory    |
+| ----------- | --------------- | ----------- | ------------ |
+| Claude Code | `.mcp.json`     | `CLAUDE.md` | `.claude/`   |
+| OpenCode    | `opencode.json` | `AGENTS.md` | `.opencode/` |
 
 ## Rule Filtering
 
