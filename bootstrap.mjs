@@ -52,11 +52,11 @@ const TOOLS = {
     // Config files to always copy (never symlink)
     // Format: "source-file-in-config-folder": "target-path-in-project"
     configFiles: {
-      "claudecode.settings.json": ".claude/settings.json",
+      "claudecode.settings.json": ".mcp.json",
     },
 
     // Entries to add to .gitignore
-    gitignoreEntries: [".claude", "CLAUDE.md"],
+    gitignoreEntries: [".claude", "CLAUDE.md", ".mcp.json"],
   },
 
   opencode: {
